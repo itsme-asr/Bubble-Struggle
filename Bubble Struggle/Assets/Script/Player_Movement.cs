@@ -7,6 +7,8 @@ public class Player_Movement : MonoBehaviour
     //[SerializeField] private Rigidbody2D rb;
     private float inputDirX;
     private float moveDirX;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float speedBullet = 5f;
     [SerializeField] private int speed = 12;
 
     private void Update()
@@ -14,6 +16,14 @@ public class Player_Movement : MonoBehaviour
         inputDirX = Input.GetAxisRaw("Horizontal");
         moveDirX = inputDirX * speed * Time.deltaTime;
         transform.Translate(new Vector3(moveDirX, 0f, 0f));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            cloneBullet.GetComponent<Rigidbody2D>().velocity = transform.up * speedBullet;
+
+            Destroy(cloneBullet, 3f);
+        }
     }
 
 }

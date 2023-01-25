@@ -286,8 +286,8 @@ GameObject:
   m_Component:
   - component: {fileID: 444328754}
   - component: {fileID: 444328753}
-  - component: {fileID: 444328755}
   - component: {fileID: 444328756}
+  - component: {fileID: 444328755}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -372,6 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fadc3bc4311df40b4c09cf139b6106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3920048744681223365, guid: 2853d74517f85894eafd8126ddcdc5c3, type: 3}
+  speedBullet: 5
   speed: 12
 --- !u!61 &444328756
 BoxCollider2D:

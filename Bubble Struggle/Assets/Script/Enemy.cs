@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject preFab1;
-    [SerializeField] private GameObject preFab2;
+    //[SerializeField] private GameObject preFab2;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "bullet")
+        if (other.tag == "Enemy")
         {
             splitBubble();
         }
@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     private void splitBubble()
     {
         Instantiate(preFab1, transform.position, Quaternion.identity);
-        Instantiate(preFab2, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        //Instantiate(preFab2, transform.position, Quaternion.identity);
     }
 }

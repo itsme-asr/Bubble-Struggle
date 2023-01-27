@@ -6,6 +6,7 @@ public class ballDestroy : MonoBehaviour
 {
     public void dead()
     {
+
         Destroy(gameObject);
     }
 }

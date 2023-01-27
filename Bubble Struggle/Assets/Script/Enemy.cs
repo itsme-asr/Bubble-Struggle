@@ -20,8 +20,8 @@ public class Enemy : MonoBehaviour
         GameObject bubblee1 = Instantiate(preFab1, rb.position + Vector2.right / 4f, Quaternion.identity);
         GameObject bubblee2 = Instantiate(preFab1, rb.position + Vector2.left / 4f, Quaternion.identity);
         //bubblee.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed, 0), ForceMode2D.Impulse);
-        bubblee1.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4, 0), ForceMode2D.Impulse);
-        bubblee2.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0), ForceMode2D.Impulse);
+        bubblee1.GetComponent<Rigidbody2D>().AddForce(new Vector2(-7, 0), ForceMode2D.Impulse);
+        bubblee2.GetComponent<Rigidbody2D>().AddForce(new Vector2(7, 0), ForceMode2D.Impulse);
         Destroy(gameObject);
     }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 600906501960074506}
   - component: {fileID: 600906501960074507}
   - component: {fileID: 600906501960074516}
+  - component: {fileID: 6718877932479719731}
   m_Layer: 0
   m_Name: SSE1
-  m_TagString: Untagged
+  m_TagString: Dball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +122,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &6718877932479719731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600906501960074518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8b4b8e4f4df804297045b4dcc94343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

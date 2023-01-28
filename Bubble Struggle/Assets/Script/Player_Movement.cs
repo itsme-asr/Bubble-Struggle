@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     //[SerializeField] private Rigidbody2D rb;
     private float inputDirX;
     private float moveDirX;
+    [SerializeField] private GameObject fireEffect;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float speedBullet = 5f;
     [SerializeField] private int speed = 12;
@@ -21,9 +22,15 @@ public class Player_Movement : MonoBehaviour
         {
             GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             cloneBullet.GetComponent<Rigidbody2D>().velocity = transform.up * speedBullet;
-
+            deathEffect();
             Destroy(cloneBullet, 3f);
         }
+    }
+
+    private void deathEffect()
+    {
+        GameObject death = Instantiate(fireEffect, transform.position, Quaternion.identity);
+        Destroy(death, 1f);
     }
 
 }

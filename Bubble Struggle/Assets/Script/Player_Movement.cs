@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     //[SerializeField] private Rigidbody2D rb;
     private float inputDirX;
     private float moveDirX;
+    [SerializeField] private AudioSource point;
     [SerializeField] private GameObject fireEffect;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float speedBullet = 5f;
@@ -20,10 +21,13 @@ public class Player_Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             cloneBullet.GetComponent<Rigidbody2D>().velocity = transform.up * speedBullet;
             deathEffect();
             Destroy(cloneBullet, 3f);
+            Invoke("audioPlay", .1f);
+
         }
     }
 
@@ -31,6 +35,10 @@ public class Player_Movement : MonoBehaviour
     {
         GameObject death = Instantiate(fireEffect, transform.position, Quaternion.identity);
         Destroy(death, 1f);
+    }
+    public void audioPlay()
+    {
+        point.Play();
     }
 
 }

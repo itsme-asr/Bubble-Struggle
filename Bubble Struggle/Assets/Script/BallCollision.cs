@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BallCollision : MonoBehaviour
 {
+
     [SerializeField] private GameObject effect;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -9,15 +10,13 @@ public class BallCollision : MonoBehaviour
         {
             deathEffect();
             other.GetComponent<Enemy>().splitBubble();
-
-
+            //other.GetComponent<Enemy>().audioPlay();
         }
 
         else if (other.gameObject.tag == "Dball")
         {
             deathEffect();
             other.GetComponent<ballDestroy>().dead();
-
         }
     }
 

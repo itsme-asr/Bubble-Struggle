@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ballDestroy : MonoBehaviour
+public class AudioSound : MonoBehaviour
 {
 
-    public void dead()
+
+    public void playPoint()
     {
-        Destroy(gameObject);
+
     }
 }

@@ -21,13 +21,11 @@ public class Player_Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            Invoke("audioPlay", .1f);
             GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             cloneBullet.GetComponent<Rigidbody2D>().velocity = transform.up * speedBullet;
             deathEffect();
-            Destroy(cloneBullet, 3f);
-            Invoke("audioPlay", .01f);
-
+            Destroy(cloneBullet, 1f);
         }
     }
 

@@ -9,7 +9,7 @@ public class BallCollision : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-
+            pointSystem.points++;
             deathEffect();
             other.GetComponent<Enemy>().splitBubble();
             //other.GetComponent<Enemy>().audioPlay();
@@ -18,7 +18,7 @@ public class BallCollision : MonoBehaviour
 
         else if (other.gameObject.tag == "Dball")
         {
-
+            pointSystem.points++;
             deathEffect();
             other.GetComponent<ballDestroy>().dead();
         }

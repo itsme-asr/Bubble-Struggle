@@ -29,6 +29,14 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            GameObject.Find("Heart").transform.GetComponent<Heart>().loseLife();
+        }
+    }
+
     private void deathEffect()
     {
         GameObject death = Instantiate(fireEffect, transform.position, Quaternion.identity);

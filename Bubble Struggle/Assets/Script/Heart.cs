@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Heart : MonoBehaviour
 {
     [SerializeField] private int numberOfLives = 5;
@@ -18,5 +18,17 @@ public class Heart : MonoBehaviour
         }
 
     }
+    public void loseLife()
+    {
+        numberOfLives--;
+        GameObject lastLife = lives[lives.Count - 1];
+        lives.Remove(lastLife);
+        Destroy(lastLife);
 
+        if (lives.Count == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+    }
 }

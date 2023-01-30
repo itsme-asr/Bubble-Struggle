@@ -137,3 +137,4 @@ MonoBehaviour:
   preFab1: {fileID: 600906501960074518, guid: 6b8de8ae97d147c4594be7d207dcbd38, type: 3}
   rb: {fileID: 789738195314177805}
   startForce: {x: -4, y: 0}
+  smashBubble: {fileID: 8973448384965874273, guid: bca5220334e6a174894cf4a688b94b53, type: 3}

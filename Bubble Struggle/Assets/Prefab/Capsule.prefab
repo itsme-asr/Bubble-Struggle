@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 4985308077850721319, guid: 08110a4ac4b09a043b576b547816e654, type: 3}
+  smashBubble: {fileID: 633669041021870540, guid: bca5220334e6a174894cf4a688b94b53, type: 3}

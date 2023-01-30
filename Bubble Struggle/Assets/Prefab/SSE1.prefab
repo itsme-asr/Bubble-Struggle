@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7e92168ccb8e6c54abaad93fbe865988, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19516516, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8b4b8e4f4df804297045b4dcc94343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smashBubble: {fileID: 8973448384965874273, guid: bca5220334e6a174894cf4a688b94b53, type: 3}

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     //[SerializeField] private int speed = 7;
     //[SerializeField] private GameObject preFab2;
     [SerializeField] private Vector2 startForce;
+    [SerializeField] private AudioSource smashBubble;
     private void Start()
     {
         rb.AddForce(startForce, ForceMode2D.Impulse);
@@ -26,6 +27,16 @@ public class Enemy : MonoBehaviour
         bubblee1.GetComponent<Rigidbody2D>().AddForce(new Vector2(-7, 0), ForceMode2D.Impulse);
         bubblee2.GetComponent<Rigidbody2D>().AddForce(new Vector2(7, 0), ForceMode2D.Impulse);
         Destroy(gameObject);
+        playSmash();
+
+    }
+
+    public void playSmash()
+    {
+        if (smashBubble != null)
+        {
+            smashBubble.Play();
+        }
     }
 
 

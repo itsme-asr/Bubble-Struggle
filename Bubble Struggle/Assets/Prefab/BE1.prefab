@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preFab1: {fileID: 789738195314177807, guid: 8bbbd166d84f83f4a83cb69b97a2ded2, type: 3}
-  point: {fileID: 8143342632877038330, guid: df866bcfb82e2a646ac7dbd23e290807, type: 3}
   rb: {fileID: 8118884619551659263}
   startForce: {x: -5, y: 0}
+  smashBubble: {fileID: 8973448384965874273, guid: bca5220334e6a174894cf4a688b94b53, type: 3}

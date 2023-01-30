@@ -26,7 +26,7 @@ public class Player_Movement : MonoBehaviour
             cloneBullet.GetComponent<Rigidbody2D>().velocity = transform.up * speedBullet;
             deathEffect();
             Destroy(cloneBullet, 3f);
-            Invoke("audioPlay", .1f);
+            Invoke("audioPlay", .01f);
 
         }
     }
